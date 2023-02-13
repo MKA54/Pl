@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plumsail", "Plumsail\Plumsail.csproj", "{2C13A6FC-11F4-422D-B0FD-FDC120F639C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ariph", "Ariph\Ariph.csproj", "{5D3E6FA0-7DBE-4B5B-8DFB-B559FD64DC8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C13A6FC-11F4-422D-B0FD-FDC120F639C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C13A6FC-11F4-422D-B0FD-FDC120F639C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C13A6FC-11F4-422D-B0FD-FDC120F639C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C13A6FC-11F4-422D-B0FD-FDC120F639C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3E6FA0-7DBE-4B5B-8DFB-B559FD64DC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3E6FA0-7DBE-4B5B-8DFB-B559FD64DC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3E6FA0-7DBE-4B5B-8DFB-B559FD64DC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3E6FA0-7DBE-4B5B-8DFB-B559FD64DC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C86F4ABB-24E1-4466-BCA5-C79027372609}
+	EndGlobalSection
+EndGlobal
