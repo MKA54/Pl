@@ -40,15 +40,7 @@ namespace Ariph
                 var calc = new SimpleCalculator();
                 var func = calc.ParseExpression(translatedExpression).Compile();
 
-                return "DataTable.Compute: " + new DataTable().Compute(translatedExpression, null) + ", Sprache.Calc: " + func();
-            }
-            catch (SyntaxErrorException)
-            {
-                return "Возникла синтаксическая ошибка, проверьте выражение.";
-            }
-            catch (KeyNotFoundException)
-            {
-                return "Введено некорректное римское число.";
+                return "Result: " + func();
             }
             catch (ParseException)
             {
