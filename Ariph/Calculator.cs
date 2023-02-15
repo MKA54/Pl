@@ -1,10 +1,12 @@
 ﻿using System.Data;
+using Sprache;
+using Sprache.Calc;
 
 namespace Ariph
 {
     public class Calculator
     {
-        public static string? Evaluate(string input)
+        public static string Evaluate(string input)
         {
             try
             {
@@ -35,16 +37,22 @@ namespace Ariph
                     translatedExpression += input[i];
                 }
 
-                return new DataTable().Compute(translatedExpression, null).ToString();
+                var calc = new SimpleCalculator();
+                var func = calc.ParseExpression(translatedExpression).Compile();
+
+                return "DataTable.Compute: " + new DataTable().Compute(translatedExpression, null) + ", Sprache.Calc: " + func();
             }
             catch (SyntaxErrorException)
             {
                 return "Возникла синтаксическая ошибка, проверьте выражение.";
             }
-
             catch (KeyNotFoundException)
             {
                 return "Введено некорректное римское число.";
+            }
+            catch (ParseException)
+            {
+                return "Возникла синтаксическая ошибка, проверьте выражение.";
             }
         }
     }
