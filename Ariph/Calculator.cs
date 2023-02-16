@@ -1,5 +1,4 @@
-﻿using System.Data;
-using Sprache;
+﻿using Sprache;
 using Sprache.Calc;
 
 namespace Ariph
@@ -10,6 +9,11 @@ namespace Ariph
         {
             try
             {
+                if (string.IsNullOrEmpty(input))
+                {
+                    return "Пустое выражение.";
+                }
+
                 var translatedExpression = "";
                 var number = "";
 
@@ -43,6 +47,10 @@ namespace Ariph
                 return "Result: " + func();
             }
             catch (ParseException)
+            {
+                return "Возникла ошибка с математическими символами, проверьте выражение.";
+            }
+            catch (KeyNotFoundException)
             {
                 return "Возникла синтаксическая ошибка, проверьте выражение.";
             }
